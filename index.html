@@ -1,12 +1,143 @@
+
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<title>Sedona - небольшой городок в Аризоне</title>
+</head>
+<body>
+	<div class="main-container">
+		<header class="sedona-header">
+			<div class="container">
+				<nav class="sedona-navigation">
+					<a class="sedona-logo" href="index.html"><img src="img/sedona-logo.png" width="70" height="60" alt="Лого"></a>
+					<ul>
+						<li><a href="index.html" class="active">ИНФОРМАЦИЯ</a></li>
+						<li><a href="#">ФОТО И ВИДЕО</a></li>
+						<li><a href="catalog.html">ГОСТИНИЦЫ</a></li>
+						<li><a href="#">КАРТА ШТАТА</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="sedona-intro">
+			<div class="container">
+					<div class="sedona-intro-content">
+						<img class="welcome" src="http://placehold.it/150x100" width="200" height="80" alt="welcome">
+						<img class="title" src="http://placehold.it/150x100" width="200" height="80" alt="title">
+						<img class="quote" src="http://placehold.it/150x100" width="200" height="80" alt="quote">
+				</div>
+				<div class="sedona-intro-description">
+					<h1>Седона - небольшой городок в аризоне,заслуживающий большего!</h1>
+					<p>Рассмотрим 5 причин, по которым седона круче чем гранд каньон!</p>
+				</div>
+			</div>
+		</section>
+		<section class="sedona-features">
+				<div class="container">
+					<div class="sedona-features-column">
+						<div class="features-column-left">
+							<h2>Настоящий городок</h2>
+							<p class="features-number">- №1 -</p>
+							<p>Седона не атракцион для туристов, там течет своя жизнь</p>
+						</div>
+					</div>
+					<div class="sedona-features-row">
+						<div class="features-content">
+							<h2 class="features-title features-icon-house">Жилье</h2>
+							<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+						</div>
+						<div class="features-content">
+							<h2 class="features-title features-icon-food">Еда</h2>
+							<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+						</div>
+						<div class="features-content">
+							<h2 class="features-title features-icon-present">Сувениры</h2>
+							<p>Не только китайского, но и местного производства!</p>
+						</div>
+					</div>
+					<div class="sedona-features-column">
+						<div class="features-column-right">
+							<h2>Там есть мост дьявола</h2>
+							<p class="features-number">- №2 -</p>
+							<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+						</div>
+					</div>
+					<div class="sedona-features-row2">
+						<div class="features-content">
+							<h2 class="features-title">Небольшая площадь</h2>
+							<p class="features-number">- №3 -</p>
+							<p>Все достопримеча-тельности находятся очень близко</p>
+						</div>
+						<div class="features-content">
+							<h2 class="features-title">Красивая дорога</h2>
+							<p class="features-number">-№4-</p>
+							<p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+						</div>
+						<div class="features-content">
+							<h2 class="features-title">Мало туристов</h2>
+							<p class="features-number">- №5 -</p>
+							<p>Большинство едет в гранд каньон и толпится там</p>
+						</div>
+					</div>
+				</div>
+		</section>
+		<section class="sedona-booking">
+			<div class="container">
+				<div class="booking-content">
+					<div class="booking-title">Заинтересовались?</div>
+					<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+				</div>
+				<div class="booking-form">
+					<h2 class="form-title">Поиск гостиницы в седоне</h2>
+						<div class="form-content">
+							<form class="sedona-form1" action="/echo" method="post">
+							<div class="form-content-row">
+								<label for="form-content-arrive">Дата заезда:</label>
+								<div class="input-form-date">
+									<input type="text" class="form-date" id="form-content-arrive" name="date-arrive" placeholder="24 апреля 2014" value=""><i class="icon-calendar date-calendar"></i>
+								</div>
+							</div>
+							<div class="form-content-row">
+								<label for="form-content-departure">Дата выезда:</label>
+								<div class="input-form-date">
+									<input type="text" class="form-date" id="form-content-departure" name="date-departure" placeholder="4 июля 2014" value=""><i class="icon-calendar date-calendar"></i>
+								</div>
+							</div>
+							<div class="form-content-row">
+								<label for="grown">Взрослые:</label>
+								<div class="input-form-number">
+									<i class="icon-minus number-minus"></i><input class="form-number" type="number" name="grown-number" id="grown" placeholder="2" value=""><i class="icon-plus number-plus"></i>
+								</div>
+								<label for="children">Дети:</label>
+								<div class="input-form-number">
+									<i class="icon-minus number-minus"></i><input class="form-number" type="number" name="children-number" id="children" placeholder="0" value=""><i class="icon-plus number-plus"></i>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-search">Найти</button>
+						</form>
+					</div>
+				</div>
+					<!--Пока не знаю как реализовать карту-->
+				<div class="sedona-map"></div>
+			</div>
+		</section>
+		<footer class="sedona-footer">
+			<div class="container">
+				<div class="footer-content-row">
+					<div class="footer-tag"><p>#Visitsedona</p></div>
+					<div class="footer-social">
+						<a class="social-box" href="#"><i class="icon-twitter"></i></a>
+						<a class="social-box" href="#"><i class="icon-facebook"></i></a>
+						<a class="social-box" href="#"><i class="icon-youtube"></i></a>
+					</div>
+					<div class="footer-copyright">
+						<p>website by</p>
+						<a class="copyright-icon" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
 </html>
