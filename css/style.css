@@ -1,5 +1,15 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: "symbols-sedona";
+	src: url("../fonts/symbols-sedona.woff") format("woff"), url("../fonts/symbols-sedona.woff2") format("woff2");
+}
 .main-container {
-	box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.15);
+	box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+	-ms-box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+  -o-box-shadow: 0 0 15px rgba(0, 0, 0, .2);
 }
 /* 1. header */
 
@@ -32,7 +42,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 20%;
+	width: 5%;
 	min-width: 153px;
 	min-height: 56px;
 }
@@ -50,10 +60,12 @@
 }
 .main-nav a:hover {
 	color: #81b3d2;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 .sedona-logo{
  position: relative;
- width: 153px;
+ width: 135px;
  font-size: 0px;
 }
 .sedona-logo::before {
@@ -80,9 +92,10 @@
 	background-color: #fff;
 }
 .header-description {
-	width: 470px;
+	width: 500px;
 }
 .intro-description {
+	margin: 0;
 	text-align: center;
 }
 .sedona-features{
@@ -103,12 +116,19 @@
 	min-height: 256px;
 	background-color: #eeeeee;
 }
+.foto {
+	flex-grow: 2;
+	width: 67%;
+	min-height: 256px;
+	overflow: hidden;
+}
 .column-content {
-	width: 177px;
+	width: 285px;
 	text-align: center;
 }
-.features-title {
-	width: 177px;
+.features-title,
+.features-describe {
+	width: 285px;
 	text-align: center;
 }
 .column-block {
@@ -125,15 +145,31 @@
 	min-height: 332px;
 	background-color: #fff;
 }
-.foto {
-	flex-grow: 2;
-	width: 67%;
-	min-height: 256px;
-	overflow: hidden;
+.icon-wrapper {
+	width: 75px;
+	height: 72px;
+	margin-bottom: 20px;
+	background-image: url(../img/sprite.png);
+}
+.icon-home {
+	background-position: -50px -1px;
+}
+.icon-food {
+	background-position: -127px -1px;
+}
+.icon-present {
+	width: 64px;
+	height: 76px;
+	background-position: -203px -1px;
 }
 
 /* 3. booking */
 
+.map {
+	height: 472px;
+	width: 100%;
+	z-index: 0;
+}
 .booking {
 	position: relative;
 	background-color: #fff;
@@ -152,13 +188,7 @@
 .booking-header,
 .booking-content {
 	width: 500px;
-	line-height: 1.15rem;
 	text-align: center;
-}
-.map {
-	height: 472px;
-	width: 100%;
-	z-index: 0;
 }
 .btn {
 	display: block;
@@ -174,6 +204,8 @@
 .btn-search-form:hover {
 	color: #fff;
 	background-color: #594a41;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 .btn-search-form:active {
 	opacity: 0.7;
@@ -203,6 +235,8 @@
 }
 .search-form input[type="submit"]:hover {
 	background-color: #5b9cc5;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 .search-form input[type="submit"]:active {
 	opacity: 0.7;
@@ -245,6 +279,8 @@
 .childrens-wrapper input[type="text"]:focus,
 .adults-wrapper input[type="text"]:focus {
 	background-color: #fff;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 .childrens-wrapper label,
 .adults-wrapper label {
@@ -270,9 +306,71 @@
 }
 .date-wrapper input[type="text"]:focus {
 	background-color: #fff;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 .date-wrapper label {
 	width: 111px;
+}
+.btn-calendar {
+	position: absolute;
+	top: 7px;
+	left: 420px;
+	width: 21px;
+	height: 22px;
+	background-image: url(../img/sprite.png);
+	background-position: -1px -1px;
+	cursor: pointer;
+}
+.btn-calendar:hover {
+	background-position: -292px -1px;
+}
+.btn-calendar:active {
+	background-position: -269px -1px;
+}
+.btn-minus,
+.btn-plus {
+	position: relative;
+	width: 38px;
+	height: 38px;
+	background-color: #eeeeee;
+}
+.btn-minus, .btn-minus {
+	cursor: pointer;
+}
+.btn-minus::before {
+	position: absolute;
+	left: 13px;
+	top: 17.5px;
+	content: "";
+	width: 12px;
+	height: 3px;
+	background-image: url(../img/sprite.png);
+	background-position: -674px -1px;
+}
+.btn-minus:hover::before {
+	background-position: -674px -1px;
+	opacity:.3;
+}
+.btn-minus:active::before {
+	background-position: -660px -1px;
+}
+.btn-plus::before {
+	position: absolute;
+	top: 13.5px;
+	left: 13.5px;
+	content: "";
+	width: 11px;
+	height: 11px;
+	background-image: url(../img/sprite.png);
+	background-position: -24px -1px;
+}
+.btn-plus:hover::before {
+	background-position: -24px -1px;
+	opacity:.3;
+}
+.btn-plus:active::before {
+	background-position: -688px -1px;
 }
 
 /* 4. hotels-search */
@@ -283,7 +381,7 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	min-height: 219px;
-	padding: 0 6%;
+	padding: 0 5%;
 	color: #fff;
 	background-color: #5b9cc5;
 	background-image: url(../img/hotels-bg.jpg);
@@ -300,8 +398,10 @@
 }
 .search-header {
 	width: 100%;
-	font-size: 1.15rem;
+	font-size: 16px;
+	font-weight: bold;
 	text-align: left;
+  line-height: 21px;
 }
 .search-column-left,
 .search-column-right {
@@ -335,14 +435,40 @@
 .list-criteria input[type="checkbox"] {
 	display: none;
 }
-
-.list-criteria label {
-	margin-left: 30px;
+.list-criteria input[type="checkbox"] + label {
+  width: 100%;
+  padding-left: 37px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.list-criteria input[type="checkbox"] + label:before {
+  position: absolute;
+  content: "\2610";
+  top:0;
+  left: 0;
+  width: 24px;
+  height: 20px;
+  font-family: "symbols-sedona";
+  font-size: 26px;
+  color: #b5b5b5;
+}
+input[type="checkbox"] + label:hover:before {
+	color: #fefefe;
+	transition:all .3s;
+	-webkit-transition:all .3s
+}
+input[type="checkbox"]:disabled + label:before {
+	color: #b5b5b5;
+}
+input[type="checkbox"]:checked + label:before {
+	content: "\2611";
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 .range-wrapper {
 	align-items: center;
 }
-.price-toogle {
+.range-text-wrapper {
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -353,7 +479,8 @@
 	border: 2px solid #fff;
 	border-radius: 3px;
 }
-.filter-toogle {
+.start-text,
+.finish-text {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -362,7 +489,8 @@
 	min-height: inherit;
 	margin-left: 5px;
 }
-.filter-toogle input[type="text"] {
+.start-text input[type="text"],
+.finish-text input[type="text"] {
 	width: 80%;
 	padding-left: 5px;
 	font-size: 14px;
@@ -371,6 +499,12 @@
 	background-color: rgba(255, 255, 255, 0);
 	border: none;
 	outline: none;
+}
+.start-text::after {
+	content: "";
+	width: 2px;
+	height: 22px;
+	background-color: #fff;
 }
 .result-btn {
 	width: 137px;
@@ -384,6 +518,8 @@
 .result-btn:hover {
 	color: #000;
 	background-color: #fff;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 
 /* 5. results */
@@ -396,6 +532,8 @@
 .about-btn:hover {
 	color: #fff;
 	background-color: #5b9cc5;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 .about-btn:active {
 	opacity: 0.7;
@@ -408,6 +546,8 @@
 .reserv-btn:hover {
 	color: #fff;
 	background-color: #594a41;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 .reserv-btn:active {
 	opacity: 0.7;
@@ -475,24 +615,20 @@
 .icon-up-dir::after {
 	position: absolute;
 	left: -20px;
-	content: "";
+	content: "\25b2";
 	font-size: 14px;
 }
 .icon-down-dir::after {
 	position: absolute;
-	content: "";
+	content: "\25bc";
 	font-size: 14px;
 }
 .list-one {
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
-
 .list-two {
-	-ms-flex-pack: end;
 	justify-content: flex-end;
 }
-
 .hotel-card {
 	display: flex;
 	flex-direction: row;
@@ -554,6 +690,15 @@
 	color: #81b3d2;
 	text-align: right;
 }
+.rating-stars-icon-four::before {
+	content: "\2605  \2605  \2605  \2605";
+}
+.rating-stars-icon-three::before {
+	content: "\2605  \2605  \2605";
+}
+.rating-stars-icon-two::before {
+	content: "\2605  \2605";
+}
 .rating-number {
 	font-weight: 400;
 	width: 110px;
@@ -593,9 +738,80 @@
 }
 .social-box:hover {
 	background-color: #5b9cc5;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 .social-box:active {
 	opacity: 0.7;
+}
+.icon-facebook::before {
+	position: absolute;
+	display: inline-block;
+	width: 1em;
+	margin-right: 0.3em;
+	margin-left: 0.2em;
+	font-weight: normal;
+	line-height: 1em;
+	font-family: "symbols-sedona";
+	font-size: 19px;
+	text-align: center;
+	text-transform: none;
+	text-decoration: inherit;
+	font-style: normal;
+	font-variant: normal;
+	color: #fff;
+	speak: none;
+	top: 13px;
+	left: 13px;
+	content: "\66";
+	width: 10px;
+	height: 19px;
+}
+.icon-twitter::before {
+	position: absolute;
+	display: inline-block;
+	width: 1em;
+	margin-right: 0.3em;
+	margin-left: 0.2em;
+	font-weight: normal;
+	line-height: 1em;
+	font-family: "symbols-sedona";
+	font-size: 19px;
+	text-align: center;
+	text-transform: none;
+	text-decoration: inherit;
+	font-style: normal;
+	font-variant: normal;
+	color: #fff;
+	speak: none;
+	top: 13px;
+	left: 10px;
+	content: "\74";
+	width: 10px;
+	height: 19px;
+}
+.icon-youtube::before {
+	position: absolute;
+	display: inline-block;
+	width: 1em;
+	margin-right: 0.3em;
+	margin-left: 0.2em;
+	font-weight: normal;
+	line-height: 1em;
+	font-family: "symbols-sedona";
+	font-size: 19px;
+	text-align: center;
+	text-transform: none;
+	text-decoration: inherit;
+	font-style: normal;
+	font-variant: normal;
+	color: #fff;
+	speak: none;
+	top: 13px;
+	left: 12px;
+	content: "\f39e";
+	width: 10px;
+	height: 19px;
 }
 .footer-copyright {
 	display: flex;
@@ -607,15 +823,23 @@
 .footer-copyright p {
 	align-self: center;
 }
-.footer-copyright a {
+.copyright-icon{
 	font-size: 0;
 	display: block;
-	width: 113px;
-	height: 39px;
+	width:113px;
+	min-height:39px;
+	background:url(../img/logo-academy.png) center no-repeat;
 }
-.footer-copyright a:hover {
+.copyright-icon:hover{
+	background:url(../img/logo-hover.png) center no-repeat;
+	transition:all .6s;
+	-webkit-transition:all .6s
 }
-.footer-copyright a:active {
+.copyright-icon:active{
+	background:url(../img/logo-academy.png) center no-repeat;
+	opacity:.3;
+	transition:all .6s;
+	-webkit-transition:all .6s
 }
 
 /* main */
@@ -634,15 +858,14 @@ body {
 	min-width: 768px;
 	background-color: #eeeeee;
 }
-h1 {
+h1, h2, h3 {
+	font-size: 21px;
 	text-align: center;
-}
-h2 {
-	font-size: 1.5rem;
-	text-align: center;
+	line-height: 26px;
 }
 p {
 	font-weight: 400;
+	text-align: center;
 }
 ul {
 	margin: 0;
@@ -656,6 +879,8 @@ a {
 }
 a:hover {
 	color: #81b3d2;
+	transition:all .3s;
+	-webkit-transition:all .3s
 }
 a:active {
 	color: #808080;
