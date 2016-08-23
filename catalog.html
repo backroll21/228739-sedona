@@ -24,7 +24,7 @@
 		<!-- search -->
 					<form class="sedona-form" action="/echo" method="post">
 						<div class="search-column search-column-left">
-								<h3 class="search-header">Инфраструктура</h3>
+								<h2 class="search-header">Инфраструктура</h2>
 							<ul class="list-criteria">
 								<li class="list-item">
 								<input type="checkbox" id="pool"  name="place" value="" checked>
@@ -41,7 +41,7 @@
 							</ul>
 						</div>
 						<div class="search-column search-column-right">
-								<h3 class="search-header">Тип жилья</h3>
+								<h2 class="search-header">Тип жилья</h2>
 							<ul class="list-criteria">
 								<li class="list-item">
 								<input type="checkbox" id="hotel"  name="living" value="" checked>
@@ -58,7 +58,7 @@
 							</ul>
 						</div>
 						<section class="search-block search-price">
-							<h3 class="search-header">Стоимость в сутки (Р):</h3>
+							<h2 class="search-header">Стоимость в сутки (Р):</h2>
 							<div class="range-wrapper">
 								<div class="range-text-wrapper">
 							    <div class="start-text">
@@ -70,12 +70,14 @@
 							        <input type="text" id="finish-price" name="finish-price" value="3000">
 							    </div>
 							  </div>
-							<div class="search-slider">
-								<div class="search-slider-toogle toogle-min"></div>
-								<div class="search-slider-toogle toogle-max"></div>
-							</div>
-							<input type="submit" class="result-btn" name="result" value="Показать">
-						</div>
+								<div class="search-slider">
+	                <div class="search-slider-active">
+	                  <div class="search-slider-toogle toogle-min"></div>
+	                  <div class="search-slider-toogle toogle-max"></div>
+	                </div>
+	              </div>
+						<input type="submit" class="result-btn" name="result" value="Показать">
+					</div>
 						</section>
 					</form>
 		</header>
@@ -84,7 +86,7 @@
 		<section class="hotels-search-results-header">
 						<h2 class="filter-title">Найдено: <span class="result-value">3 </span></h2>
 						<div class="filter-sorting">
-							<h3 class="sort-title">Сортировка:</h3>
+							<h2 class="sort-title">Сортировка:</h2>
 							<div class="sort-list-wrapper">
 								<ul class="list-one">
 									<li class="sort-item"><a class="link-sort link-active" href="#">По цене</a></li>
