@@ -27,6 +27,3 @@ searchForm.addEventListener("submit", function (event) {
           localStorage.setItem("dateArrval", dateArrval.value);
         }
 });
-
-// Скрипт для обоих страниц
-html.className = html.className.replace("no-js","js");

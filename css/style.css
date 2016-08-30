@@ -243,7 +243,7 @@ input[type="submit"] {
 	overflow: hidden;
 }
 .column-content {
-	width: 285px;
+	width: 320px;
 	text-align: center;
 }
 .features-title,
@@ -367,6 +367,7 @@ input[type="submit"] {
 	height: 395px;
 	background-color: #fff;
 	box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
+	z-index: 1;
 }
 .form-show {
   display: -webkit-box;
@@ -537,6 +538,14 @@ input[type="submit"] {
 }
 .btn-plus:active::before {
 	background-position: -688px -1px;
+}
+.map {
+	height: 473px;
+	width: 100%;
+	background-image: url("../img/map.jpg");
+	background-repeat: no-repeat;
+	background-position: -40px -155px;
+	z-index: 0;
 }
 /******************** 5. hotels-search ********************/
 
