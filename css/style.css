@@ -137,6 +137,7 @@ input[type='submit']
     width: 20%;
     min-width: 153px;
     min-height: 56px;
+    height: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -188,6 +189,7 @@ input[type='submit']
     width: 138px;
     height: 70px;
     content: '';
+    background-color: transparent;
     background-image: url('../img/sedona-logo.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -203,6 +205,7 @@ input[type='submit']
     display: flex;
         flex-direction: column;
     min-height: 215px;
+    height: 0;
     background-color: #fff;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -252,6 +255,7 @@ input[type='submit']
         flex-direction: column;
     width: 33%;
     min-height: 256px;
+    height: 0;
     background-color: #eee;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -320,6 +324,7 @@ input[type='submit']
         flex-direction: column;
     width: 33%;
     min-height: 332px;
+    height: 0;
     background-color: #fff;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -339,6 +344,7 @@ input[type='submit']
     width: 75px;
     height: 72px;
     margin-bottom: 5px;
+    background-color: transparent;
     background-image: url(../img/sprite.png);
 }
 .icon-home
@@ -580,6 +586,7 @@ input[type='submit']
     width: 21px;
     height: 22px;
     cursor: pointer;
+    background-color: transparent;
     background-image: url(../img/sprite.png);
     background-position: -1px -1px;
 }
@@ -612,6 +619,7 @@ input[type='submit']
     width: 12px;
     height: 3px;
     content: '';
+    background-color: transparent;
     background-image: url(../img/sprite.png);
     background-position: -674px -1px;
 }
@@ -632,6 +640,7 @@ input[type='submit']
     width: 11px;
     height: 11px;
     content: '';
+    background-color: transparent;
     background-image: url(../img/sprite.png);
     background-position: -24px -1px;
 }
@@ -649,6 +658,7 @@ input[type='submit']
     z-index: 0;
     width: 100%;
     height: 473px;
+    background-color: #e2e7d0;
     background-image: url('../img/map.jpg');
     background-repeat: no-repeat;
     background-position: -40px -155px;
@@ -662,6 +672,7 @@ input[type='submit']
     display: flex;
         flex-direction: row;
     min-height: 219px;
+    height: 0;
     padding: 0 6%;
     color: #fff;
     background-color: #5b9cc5;
@@ -704,6 +715,7 @@ input[type='submit']
     display: flex;
         flex-direction: column;
     width: 25%;
+    height: 0;
     margin-top: -7px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -819,6 +831,7 @@ input[type='checkbox']:checked + label:before
         flex-direction: row;
     width: 100%;
     min-height: 31px;
+    height: 0;
     margin-left: 23px;
     border: 2px solid #fff;
     border-radius: 3px;
@@ -986,6 +999,7 @@ input[type='checkbox']:checked + label:before
     display: flex;
         flex-direction: row;
     min-height: 89px;
+    height: 0;
     padding: 0 6%;
     border-bottom: 1px solid #eee;
     background-color: #fff;
@@ -1109,6 +1123,7 @@ input[type='checkbox']:checked + label:before
     display: flex;
         flex-direction: row;
     min-height: 149px;
+    height: 0;
     padding: 0 6%;
     border-bottom: 1px solid #eee;
     background-color: #fff;
@@ -1129,6 +1144,7 @@ input[type='checkbox']:checked + label:before
         flex-direction: row;
     width: 424px;
     min-height: 90px;
+    height: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -1152,6 +1168,7 @@ input[type='checkbox']:checked + label:before
     display: flex;
         flex-direction: column;
     width: 265px;
+    height: 0;
     min-height: inherit;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1203,6 +1220,7 @@ input[type='checkbox']:checked + label:before
     display: flex;
         flex-direction: column;
     min-height: 90px;
+    height: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1250,6 +1268,7 @@ input[type='checkbox']:checked + label:before
     display: flex;
         flex-direction: row;
     min-height: 120px;
+    height: 0;
     background-color: #fff;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1316,6 +1335,7 @@ input[type='checkbox']:checked + label:before
     top: 13px;
     left: 13px;
     display: inline-block;
+    vertical-align: top;
     width: 1em;
     width: 10px;
     height: 19px;
@@ -1327,6 +1347,7 @@ input[type='checkbox']:checked + label:before
     text-transform: none;
     color: #fff;
     speak: none;
+
 }
 .icon-twitter::before
 {
@@ -1340,6 +1361,7 @@ input[type='checkbox']:checked + label:before
     top: 13px;
     left: 10px;
     display: inline-block;
+    vertical-align: top;
     width: 1em;
     width: 10px;
     height: 19px;
@@ -1364,6 +1386,7 @@ input[type='checkbox']:checked + label:before
     top: 13px;
     left: 12px;
     display: inline-block;
+    vertical-align: top;
     width: 1em;
     width: 10px;
     height: 19px;
@@ -1403,7 +1426,7 @@ input[type='checkbox']:checked + label:before
     display: block;
     width: 113px;
     min-height: 39px;
-    background: url(../img/logo-academy.png) center no-repeat;
+    background: transparent url(../img/logo-academy.png) center no-repeat;
 }
 .copyright-icon:hover
 {
