@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Sedona - небольшой городок в Аризоне</title>
     <meta name="description" content="">
-    <link href="css/normalize.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -30,7 +31,7 @@
       </section>
       <!-- features -->
       <section class="sedona-features">
-        <article class="features-column column-block">
+        <article class="features-column column-block" >
           <div class="column-content">
             <h2 class="title-row">Настоящий <br>городок</h2>
             <p class="number-row">&mdash; №1 &mdash;</p>
@@ -90,8 +91,10 @@
       <!-- booking -->
       <section class="booking">
         <div class="hotel-wrapper">
-          <h3 class="booking-header">Заинтересовались?</h3>
-          <p class="booking-content">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <h3 class="booking-header" data-aos="fade-up"
+     data-aos-duration="3000">Заинтересовались?</h3>
+          <p class="booking-content" data-aos="fade-up"
+     data-aos-duration="3000">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="btn btn-search-form" href="#">Поиск гостиницы в Седоне</a>
           <form class="search-form" method="get">
             <div class="date-wrapper">
@@ -143,6 +146,14 @@
         </div>
       </footer>
     </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script>
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
   </body>
 </html>
